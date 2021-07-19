@@ -12,8 +12,8 @@ app.use(express.static(path.join(__dirname, '.')));
 
 app.use('/api/qr', qrCodeRouter);
 
-app.use((_request, response) => {
-  response.sendFile(path.join(__dirname, './index.html'));
-});
+// app.use((_request, response) => {
+//   response.sendFile(path.join(__dirname, './index.html'));
+// });
 
 app.listen(APP_PORT);

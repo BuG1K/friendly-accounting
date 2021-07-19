@@ -47,8 +47,8 @@ const ReceiptPreview: FunctionComponent = () => {
           .reduce((prevState, count) => prevState + Number(count), 0);
         const sum = (Number(price) / sumCount) * Number(userCount);
         const roundSum = Math.round(sum * 100) / 100;
-        const lineCount = sumCount !== 1 ? `${userCount}/${sumCount}|` : '';
-        const line = `[${name}|${lineCount}${price}]`;
+        const lineCount = sumCount !== 1 ? `${userCount}/${sumCount} | ` : '';
+        const line = `[ ${name} | ${lineCount}${price} ]`;
 
         if (foundTransaction) {
           result = result.map((transaction) => {
